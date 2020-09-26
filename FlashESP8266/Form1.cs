@@ -118,7 +118,7 @@ namespace FlashESP8266
             {
                 i = int.Parse(filesize.Replace("KB", ""))*1024;
             }
-            filesize = i.ToString("X");
+            filesize = i.ToString();
             
 
 
@@ -149,7 +149,7 @@ namespace FlashESP8266
 
                     if (myProcess.ExitCode != 0)
                     {
-                        MessageBox.Show("Flash Failed with arg" + arg + " are the Settings correct?");
+                        MessageBox.Show("Flash Failed with arg" + arg + " are the Settings correct? Try reducing speed.");
                     }
                     else
                     {
@@ -180,6 +180,39 @@ namespace FlashESP8266
         private void label7_Click(object sender, EventArgs e)
         {
             UpdateElmts();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string cmd = "esptool.exe";
+            //Flash Arguments for the esptool.exe. Change when needed.
+            string arg = "flash_id";
+
+            
+            var myProcess = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = cmd,
+                    Arguments = arg,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    CreateNoWindow = true
+                }
+            };
+
+            myProcess.Start();
+            while (!myProcess.StandardOutput.EndOfStream)
+            {
+                string line = myProcess.StandardOutput.ReadLine();
+                if (line.Contains("Detected flash size"))
+                {
+                    MessageBox.Show(line);
+                }
+
+                // do something with line
+            }
+
         }
     }
 }

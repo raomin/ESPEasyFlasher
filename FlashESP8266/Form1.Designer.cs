@@ -40,6 +40,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.flashSize = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,11 +58,11 @@
             // 
             // bttn_flash
             // 
-            this.bttn_flash.Location = new System.Drawing.Point(336, 164);
+            this.bttn_flash.Location = new System.Drawing.Point(295, 164);
             this.bttn_flash.Name = "bttn_flash";
-            this.bttn_flash.Size = new System.Drawing.Size(85, 29);
+            this.bttn_flash.Size = new System.Drawing.Size(126, 29);
             this.bttn_flash.TabIndex = 0;
-            this.bttn_flash.Text = "Flash";
+            this.bttn_flash.Text = "Upload to ESP";
             this.bttn_flash.UseVisualStyleBackColor = true;
             this.bttn_flash.Click += new System.EventHandler(this.bttn_flash_Click);
             // 
@@ -131,6 +132,7 @@
             this.speed.Name = "speed";
             this.speed.Size = new System.Drawing.Size(121, 29);
             this.speed.TabIndex = 6;
+            this.speed.Text = "460800";
             // 
             // tabControl1
             // 
@@ -165,13 +167,13 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Font Awesome 5 Free Solid", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Wingdings 3", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(398, 34);
+            this.label7.Location = new System.Drawing.Point(398, 27);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 17);
+            this.label7.Size = new System.Drawing.Size(34, 28);
             this.label7.TabIndex = 16;
-            this.label7.Text = "";
+            this.label7.Text = "Q";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // checkBox1
@@ -189,6 +191,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.flashSize);
             this.tabPage2.Controls.Add(this.label5);
@@ -206,16 +209,29 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Backup";
             // 
+            // button2
+            // 
+            this.button2.AccessibleDescription = "Detect flashSize";
+            this.button2.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.Location = new System.Drawing.Point(237, 156);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(29, 25);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "R";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Font Awesome 5 Free Solid", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Wingdings 3", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(413, 40);
+            this.label6.Location = new System.Drawing.Point(411, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 17);
+            this.label6.Size = new System.Drawing.Size(34, 28);
             this.label6.TabIndex = 15;
-            this.label6.Text = "";
+            this.label6.Text = "Q";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // flashSize
@@ -236,6 +252,7 @@
             this.flashSize.Name = "flashSize";
             this.flashSize.Size = new System.Drawing.Size(108, 25);
             this.flashSize.TabIndex = 14;
+            this.flashSize.Text = "4MB";
             // 
             // label5
             // 
@@ -284,6 +301,7 @@
             this.speed2.Name = "speed2";
             this.speed2.Size = new System.Drawing.Size(108, 25);
             this.speed2.TabIndex = 11;
+            this.speed2.Text = "460800";
             // 
             // label3
             // 
@@ -300,11 +318,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 117);
+            this.label4.Location = new System.Drawing.Point(10, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 20);
+            this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Upload speed";
+            this.label4.Text = "Transfer speed";
             // 
             // ComPortBkp
             // 
@@ -366,6 +384,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
     }
 }
 
