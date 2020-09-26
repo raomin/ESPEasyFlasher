@@ -7,7 +7,7 @@ Now supports firmware backup and flash operation, so easy clonning of your runni
 
 ## Installation
 
-Go to the release and get the last version of the ZIP.
+Go to the [latest release](https://github.com/raomin/ESPEasyFlasher/releases/latest) and get the ZIP file.
 Unzip all in one folder (the FlashESP8266.exe and esp-tool.exe must be in the same folder).
 
 ## Usage
